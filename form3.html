@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Конвентер</h2>
+<p>
+  <label>Уведіть вашу вагу в кг</label>
+  <input id="inputGrams" type="number" placeholder="кг" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Ваша вага в центнерах: <span id="outputKilograms"></span></p>
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/100;
+}
+</script>
+<p>Ваша вага в фунтах: <span id="outputPounds"></span></p>
+<script>
+function weightConverter(valNum) 
+{document.getElementById("outputPounds").innerHTML=valNum*2.2046;}
+</script>
+
+<h2>Введи 2 числа и получи суму</h2>
+<form onsubmit="return false" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+  <input name="a" type="number" step="any"> +
+  <input name="b" type="number" step="any"> =
+  <output name="o"></output>
+</form>
+<h2>Скільки ви хочете заробити?</h2>
+<form onsubmit="return false" oninput="level.value = flevel.valueAsNumber">
+  <label for="flying"></label>
+  <input name="flevel" id="flying" type="range" min="0" max="100" value="0"> 
+  <output for="flying" name="level">0</output>/100
+</form>
+<dr>
+<dr>
+
+<form onsubmit="return false" oninput="amount.value = (hours.valueAsNumber * rate.valueAsNumber) + ((hours.valueAsNumber * rate.valueAsNumber) * vat.valueAsNumber)">
+ <legend><h2>Розрахуй ЗП</h2></legend>
+ <p><label for="hours">Кількість годин</label>
+  <input type="number" min="0" id="hours" name="hours"></p>
+ <p><label for="rate">Ставка</label>
+  <span>£</span><input type="number" min="0" id="rate" name="rate"></p>
+ <p><label for="vat">Податок</label>
+  <input type="number" min="0" id="vat" value="0.20" name="vat"></p>
+ <p>Зарплата: <strong>£<output name="amount" for="hours rate vat">0</output></strong></p>
+</form>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<title>Yana Stavnycha</title>
+<form action="/signup" method="POST">
+ 
+  <p>
+    <label>Логин</label>
+    <input type="text" name="login">
+  </p>
+  <p>
+    <label>Пароль</label>
+    <input type="password" name="password">
+  </p>
+  <p>
+    <label>Подтвердите пароль</label>
+    <input type="password" name="password_confirm">
+  </p>
+<p>
+ <label>Стать:</label>
+ <label>
+  <input type="radio" name="status">
+  Чоловік
+ </label>
+ <label>
+  <input type="radio" name="status">
+  Жінка
+ </label>
+</p>
+  <p>
+    <label>Вкажіть місто</label>
+    <select name="country">
+      <option>Житомир</option>
+      <option>Київ</option>
+      <option>Львів</option>
+    </select>
+  </p>
+<p>
+<label>Інтереси</label>
+<label>
+  <input type="radio" name="interesting">
+ Футбол
+</label>
+<label>
+  <input type="radio" name="interesting">
+  Шахи
+</label>
+<label>
+  <input type="radio" name="interestings">
+  Малювання
+</label>
+<label>
+  <input type="radio" name="interesting">
+  Музика
+</label>
+</p>
+  <p>
+    <button> 
+     Очистити
+    </button>
+      <button> 
+     Відправити
+    </button>
+  </p>
+</form>
+</html>
